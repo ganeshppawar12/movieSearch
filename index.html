@@ -1,16 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infinite Scroll</title>
+  <title>Movie Search App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="image-container" id="imageContainer">
-   
+  <header>
+    <h1>Movie Search App</h1>
+  </header>
+  <main>
+    <section class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for movies...">
+      <div id="loader" class="hidden">Loading...</div>
+    </section>
+    <section id="moviesContainer"></section>
+    <div id="pagination" class="pagination"></div>
+    <!-- Add this inside the body tag -->
+<div id="movieModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
   </div>
+  
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
